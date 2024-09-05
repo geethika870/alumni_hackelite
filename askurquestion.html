@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Questions - AlumNet</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="askurquestion.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <a class="navbar-brand" href="#">AlumNet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <button class="btn btn-display-all w-100 mb-3" id="displayAllBtn">Display All Questions</button>
+            <!-- Display All Questions Section -->
+            <section class="questions-section d-none" id="allQuestionsSection">
+                <div id="allQuestionsContainer"></div>
+            </section>
+        </div>
+        <!-- Content -->
+        <div class="content">
+            <!-- Ask Questions Section -->
+            <section class="ask-questions-section py-5">
+                <div class="container">
+                    <h2 class="mb-4 text-center">Ask Your Questions</h2>
+                    <form id="askQuestionForm">
+                        <div class="mb-3">
+                            <label for="questionType" class="form-label">How would you like to ask your question?</label>
+                            <select id="questionType" name="questionType" class="form-select" required>
+                                <option value="">Select an option</option>
+                                <option value="type">Type a Question</option>
+                                <option value="upload">Upload a Document</option>
+                            </select>
+                        </div>
+                        <div id="typeQuestionSection" class="mb-3 d-none">
+                            <label for="typedQuestion" class="form-label">Type Your Question</label>
+                            <textarea id="typedQuestion" name="typedQuestion" class="form-control" rows="6" placeholder="Enter your question here..."></textarea>
+                        </div>
+                        <div id="uploadQuestionSection" class="mb-3 d-none">
+                            <label for="uploadQuestion" class="form-label">Upload a Document</label>
+                            <input type="file" id="uploadQuestion" name="uploadQuestion" class="form-control" accept=".pdf,.doc,.docx">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Question</button>
+                    </form>
+                </div>
+            </section>
+            <!-- User's Questions Section -->
+            <section class="questions-section py-5" id="userQuestionsSection">
+                <div class="container">
+                    <h3 class="text-center">Your Questions</h3>
+                    <div id="userQuestionsContainer"></div>
+                </div>
+            </section>
+            <!-- Previously Asked Questions Section -->
+            <section class="questions-section py-5 d-none" id="previousQuestionsSection">
+                <div class="container">
+                    <h3 class="text-center">Previously Asked Questions</h3>
+                    <div id="previousQuestionsContainer"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Answer Question Modal -->
+    <div class="modal fade" id="answerModal" tabindex="-1" aria-labelledby="answerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Answer the Question</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="answerType" class="form-label">How would you like to provide your answer?</label>
+                        <select id="answerType" class="form-select">
+                            <option value="">Select an option</option>
+                            <option value="type">Type an Answer</option>
+                            <option value="upload">Upload a Document</option>
+                        </select>
+                    </div>
+                    <div id="typeAnswerSection" class="mb-3 d-none">
+                        <label for="typedAnswer" class="form-label">Type Your Answer</label>
+                        <textarea id="typedAnswer" class="form-control" rows="6" placeholder="Enter your answer here..."></textarea>
+                    </div>
+                    <div id="uploadAnswerSection" class="mb-3 d-none">
+                        <label for="uploadAnswer" class="form-label">Upload a Document</label>
+                        <input type="file" id="uploadAnswer" class="form-control" accept=".pdf,.doc,.docx">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="submitAnswerBtn">Submit Answer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="askurquestion.js"></script>
+</body>
+
+</html>

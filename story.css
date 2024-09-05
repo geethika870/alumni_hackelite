@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 80%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.left-half, .right-half {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.left-half {
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+}
+
+.right-half {
+    background-color: #f0f0f0;
+}
+
+.story-post {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile-info h4 {
+    margin: 0;
+}
+
+.follow-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.story-content {
+    margin: 10px 0;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.heart-icon {
+    font-size: 20px;
+    color: #aaa;
+    margin-right: 5px;
+}
+
+.heart-icon.liked {
+    color: red; /* Change the heart color to red when liked */
+}
+
+.comment-label {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.comment-box {
+    width: 70%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.comment-btn {
+    padding: 8px 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comments-container {
+    margin-top: 10px;
+}
+
+.comments-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.comments-list li {
+    background-color: #f1f1f1;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.toggle-comments {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toggle-comments:hover {
+    text-decoration: underline;
+}
+
+.right-half h3 {
+    margin-top: 0;
+}
+
+.story-input {
+    width: 100%;
+    height: 60%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.post-actions {
+    margin-top: 20px;
+}
+
+.post-btn, .draft-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.draft-btn {
+    background-color: #6c757d;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - Alumni Connect</title>
+    <link rel="stylesheet" href="aichat.css">
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chat-header">
+            <h2>AI Chatbot</h2>
+            <p>Ask a question and connect with relevant alumni!</p>
+        </div>
+        
+        <div class="chat-section">
+            <textarea id="userQuestion" class="question-box" placeholder="Type your question..."></textarea>
+            
+            <div class="suggestions-section">
+                <h3>Suggested Questions</h3>
+                <ul class="suggested-questions">
+                    <li onclick="populateQuestion(this)">What skills are essential for my chosen field?</li>
+                    <li onclick="populateQuestion(this)">Can you share any tips on getting internships?</li>
+                    <li onclick="populateQuestion(this)">How can I network effectively in the industry?</li>
+                    <li onclick="populateQuestion(this)">What certifications should I pursue?</li>
+                    <li onclick="populateQuestion(this)">How do you handle work-life balance in this field?</li>
+                </ul>
+            </div>
+
+            <button class="ask-button" onclick="displayProfiles()">Ask</button>
+        </div>
+
+        <div class="profile-suggestions">
+            <h3>Relevant Alumni Profiles:</h3>
+            <div id="profilesContainer" class="profiles">
+                <!-- Profiles will be dynamically displayed here -->
+            </div>
+        </div>
+    </div>
+    <script src="aichat.js"></script>
+</body>
+</html>

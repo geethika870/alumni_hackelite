@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetings & Reunions | AlumNet</title>
+    <link rel="stylesheet" href="meet.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Meetings & Reunions</h1>
+            <p>Stay connected with upcoming events and gatherings through our integrated platform.</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="meetings.html">Meetings & Reunions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="add-meeting-button" onclick="toggleMeetingForm()">Add New Meeting</button>
+            <div class="meeting-form" id="meetingForm">
+                <h2>Add New Meeting</h2>
+                <label for="meetingTitle">Meeting Title</label>
+                <input type="text" id="meetingTitle" name="meetingTitle" placeholder="Enter meeting title">
+
+                <label for="meetingDate">Date</label>
+                <input type="date" id="meetingDate" name="meetingDate">
+
+                <label for="meetingTime">Time</label>
+                <input type="time" id="meetingTime" name="meetingTime">
+
+                <label for="meetingLocation">Location</label>
+                <input type="text" id="meetingLocation" name="meetingLocation" placeholder="Enter meeting location">
+
+                <label for="meetingDetails">Details</label>
+                <textarea id="meetingDetails" name="meetingDetails" rows="4" placeholder="Enter meeting details"></textarea>
+
+                <button type="button" onclick="saveMeeting()">Save Meeting</button>
+            </div>
+        </aside>
+
+        <main>
+            <section class="upcoming-events" id="upcomingEvents">
+                <h2>Upcoming Events</h2>
+                <div class="event">
+                    <h3>Annual Alumni Reunion 2024</h3>
+                    <p>Date: October 10, 2024</p>
+                    <p>Location: University Campus & Online</p>
+                    <p>Details: Join us for the annual alumni reunion, featuring keynote speakers, networking opportunities, and more.</p>
+                </div>
+                <div class="event">
+                    <h3>Virtual Networking Webinar</h3>
+                    <p>Date: September 25, 2024</p>
+                    <p>Location: Online</p>
+                    <p>Details: Connect with fellow alumni in your field during this online networking session.</p>
+                </div>
+            </section>
+
+            <section class="smart-notifications">
+                <h2>Smart Event Notifications</h2>
+                <p>AlumNet provides personalized notifications for events, reunions, and webinars based on your interests and location. You can easily add these events to your calendar and stay informed.</p>
+            </section>
+
+            <section class="hybrid-events">
+                <h2>Hybrid Events</h2>
+                <p>Attend events either virtually or in person. Our hybrid events are designed to ensure that all alumni, regardless of location, can participate and stay connected.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AlumNet. All rights reserved.</p>
+    </footer>
+
+    <script src="meet.js"></script>
+</body>
+</html>

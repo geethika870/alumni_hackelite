@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlumNet - Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Register</h2>
+            <form action="welcome.html" method="POST">
+                <div class="input-group">
+                    <label for="university">University</label>
+                    <select name="myuniversity" id="university">
+                         <option value="gu">gujarat university</option>
+                           <option value="iitg">Indian Institute of Technology,Gandhinagar</option>
+                           <option value="NU">Nirma university</option>
+                           <option value="svnit">sardar vallabhbhai National Institute of Technology,surat</option>
+                    </select>
+                     </div>
+ <div class="input-group">
+                    <label for="department">Department</label>
+                    <select name="mydepartment" id="department">
+                         <option value="cse">cse</option>
+                           <option value="it">information Technology</option>
+                           <option value="ds">data science</option>
+                           <option value="eee">EEE</option>
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="myusername" >
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password"  >
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        function setUsernamePrefix() {
+            const university = document.getElementById('university');
+            const username = document.getElementById('username');
+            username.value = university.value;
+            username.focus();
+        }
+    </script>
+</body>
+</html>

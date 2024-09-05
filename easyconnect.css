@@ -1,0 +1,67 @@
+/* Header Section Styling */
+.main-header {
+    background-color:rgba(62,60,70,255); /* Dark Blue to match the logo */
+    color: white;
+    position: relative;
+    padding: 30px 0;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 20px;
+    
+    top: 50%;
+    transform: translateY(-50%);
+    height: 120px; /* Adjust the size as needed */
+  }
+  
+  /* Navigation Bar Styling */
+  .navbar-dark {
+    background-color:rgba(62,60,70,255); /* Dark Blue for a consistent look */
+  }
+  
+  .navbar-brand, .nav-link {
+    color: white;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #FFD700; /* Gold on hover */
+  }
+  
+  .login-signup .btn {
+    color:rgba(62,60,70,255);
+    border-color: white;
+    background-color:white; /* Gold for the login/signup buttons */
+  }
+  
+  .login-signup .btn:hover {
+    background-color:white; /* Darker gold on hover */
+  }
+  
+  /* Welcome Section Styling */
+  .welcome-section {
+    background-color: #f8f9fa; /* Light background for contrast */
+    color: rgba(62,60,70,255); /* Dark Blue text */
+  }
+  
+  /* Features Section Styling */
+  .features-section .feature-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .features-section .feature-card:hover {
+    transform: translateY(-10px);
+    border-color:rgba(62,60,70,255);
+  }
+  
+  .features-section .feature-card i {
+    color:rgba(62,60,70,255);
+  }
+  
+  /* Footer Section Styling */
+  .footer-section {
+    background-color:rgba(62,60,70,255); /* Dark Blue for consistency */
+    color: white;
+  }

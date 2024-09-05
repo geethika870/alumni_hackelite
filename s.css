@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.main-header {
+    background-color: #007bff;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: #fff !important;
+}
+
+/* Stories Section */
+.stories-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.stories-section .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stories-section .card-body {
+    padding: 20px;
+}
+
+.stories-section .card .d-flex {
+    align-items: center;
+}
+
+.stories-section .card .rounded-circle {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.stories-section .card h5 {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.stories-section .card p.text-muted {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+}
+
+.stories-section .btn-outline-primary {
+    font-size: 0.875rem;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.stories-section .card-text {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.stories-section .btn-light {
+    font-size: 0.875rem;
+    color: #007bff;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 20px;
+}
+
+.stories-section .btn-light i {
+    margin-right: 5px;
+}
+
+.stories-section .text-muted {
+    font-size: 0.875rem;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.footer-section p {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+    .stories-section .card {
+        margin-bottom: 20px;
+    }
+}

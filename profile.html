@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Profile - AlumNet</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header text-center">
+        <h1>Alumni Profile</h1>
+    </header>
+
+    <!-- Profile Display Section -->
+    <section class="profile-display-section">
+        <div class="container">
+            <div class="row">
+                <!-- Profile Picture Display -->
+                <div class="col-md-4 text-center">
+                    <img src="profile-placeholder.jpg" alt="Profile Picture" id="displayProfileImage" class="img-fluid profile-picture">
+                </div>
+                <!-- Profile Information Display -->
+                <div class="col-md-8">
+                    <p><strong>Full Name:</strong> <span id="displayFullName">N/A</span></p>
+                    <p><strong>Username:</strong> <span id="displayUserName">N/A</span></p>
+                    <p><strong>University:</strong> <span id="displayUniversity">N/A</span></p>
+                    <p><strong>Branch:</strong> <span id="displayBranch">N/A</span></p>
+                    <p><strong>Email:</strong> <span id="displayEmail">N/A</span></p>
+                    <p><strong>Year of Passing:</strong> <span id="displayYearOfPassing">N/A</span></p>
+                    <p><strong>Qualification:</strong> <span id="displayQualification">N/A</span></p>
+                    <p><strong>Field of Interest:</strong> <span id="displayFieldOfInterest">N/A</span></p>
+                    <p><strong>LinkedIn:</strong> <span id="displayLinkedIn">N/A</span></p>
+                    <p><strong>Contact:</strong> <span id="displayContact">N/A</span></p>
+                    <p><strong>Hobbies:</strong> <span id="displayHobbies">N/A</span></p>
+                    <!-- Edit Profile Button -->
+                    <button id="editProfileButton" class="btn btn-primary">Edit Profile</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Edit Section (Initially Hidden) -->
+    <section id="profileEditSection" class="profile-edit-section" style="display: none;">
+        <div class="container">
+            <form id="profileForm">
+                <div class="row">
+                    <!-- Profile Picture Upload -->
+                    <div class="col-md-4 text-center">
+                        <img src="profile-placeholder.jpg" alt="Profile Picture" id="profileImage" class="img-fluid profile-picture">
+                        <div class="mb-3">
+                            <label for="profilePicture" class="form-label">Upload Profile Picture</label>
+                            <input class="form-control" type="file" id="profilePicture" accept="image/*">
+                        </div>
+                    </div>
+                    <!-- Profile Information -->
+                    <div class="col-md-8">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="userName" placeholder="Enter your username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="university" class="form-label">University</label>
+                            <input type="text" class="form-control" id="university" placeholder="Enter your university">
+                        </div>
+                        <div class="mb-3">
+                            <label for="branch" class="form-label">Branch</label>
+                            <input type="text" class="form-control" id="branch" placeholder="Enter your branch">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="yearOfPassing" class="form-label">Year of Passing</label>
+                            <input type="text" class="form-control" id="yearOfPassing" placeholder="Enter your year of passing">
+                        </div>
+                        <div class="mb-3">
+                            <label for="qualification" class="form-label">Qualification</label>
+                            <input type="text" class="form-control" id="qualification" placeholder="Enter your qualification">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fieldOfInterest" class="form-label">Field of Interest</label>
+                            <input type="text" class="form-control" id="fieldOfInterest" placeholder="Enter your field of interest">
+                        </div>
+                        <div class="mb-3">
+                            <label for="linkedin" class="form-label">LinkedIn</label>
+                            <input type="url" class="form-control" id="linkedin" placeholder="Enter your LinkedIn profile URL">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Contact</label>
+                            <input type="tel" class="form-control" id="contact" placeholder="Enter your contact number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="hobbies" class="form-label">Hobbies</label>
+                            <input type="text" class="form-control" id="hobbies" placeholder="Enter your hobbies">
+                        </div>
+                    </div>
+                </div>
+                <!-- Save Profile Button -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-success">Save Profile</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="profile.js"></script>
+    <script>
+        // Toggle between display and edit sections
+        document.getElementById('editProfileButton').addEventListener('click', function() {
+            document.querySelector('.profile-display-section').style.display = 'none';
+            document.getElementById('profileEditSection').style.display = 'block';
+        });
+
+        // Handle form submission and display updated profile information
+        document.getElementById('profileForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            // Get values from the form
+            const fullName = document.getElementById('fullName').value;
+            const userName = document.getElementById('userName').value;
+            const university = document.getElementById('university').value;
+            const branch = document.getElementById('branch').value;
+            const email = document.getElementById('email').value;
+            const yearOfPassing = document.getElementById('yearOfPassing').value;
+            const qualification = document.getElementById('qualification').value;
+            const fieldOfInterest = document.getElementById('fieldOfInterest').value;
+            const linkedin = document.getElementById('linkedin').value;
+            const contact = document.getElementById('contact').value;
+            const hobbies = document.getElementById('hobbies').value;
+
+            // Update the display section with the form values
+            document.getElementById('displayFullName').textContent = fullName || "N/A";
+            document.getElementById('displayUserName').textContent = userName || "N/A";
+            document.getElementById('displayUniversity').textContent = university || "N/A";
+            document.getElementById('displayBranch').textContent = branch || "N/A";
+            document.getElementById('displayEmail').textContent = email || "N/A";
+            document.getElementById('displayYearOfPassing').textContent = yearOfPassing || "N/A";
+            document.getElementById('displayQualification').textContent = qualification || "N/A";
+            document.getElementById('displayFieldOfInterest').textContent = fieldOfInterest || "N/A";
+            document.getElementById('displayLinkedIn').textContent = linkedin || "N/A";
+            document.getElementById('displayContact').textContent = contact || "N/A";
+            document.getElementById('displayHobbies').textContent = hobbies || "N/A";
+
+            // Show the display section and hide the edit section
+            document.getElementById('profileEditSection').style.display = 'none';
+            document.querySelector('.profile-display-section').style.display = 'block';
+
+            // If a profile picture was uploaded, display it
+            const profilePicture = document.getElementById('profilePicture').files[0];
+            if (profilePicture) {
+                const reader = new FileReader();
+                reader.onload = function() {
+                    document.getElementById('displayProfileImage').src = reader.result;
+                }
+                reader.readAsDataURL(profilePicture);
+            }
+        });
+    </script>
+</body>
+</html>

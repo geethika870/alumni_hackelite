@@ -1,0 +1,41 @@
+/* Custom CSS for AlumNet */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Light gray background for the entire page */
+}
+
+.main-header {
+    background-color: #001f3f; /* Peach color for header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.form-section, .requests-section {
+    padding: 40px 0;
+}
+
+.form-section h2, .requests-section h2 {
+    margin-bottom: 20px;
+    color: #333; /* Dark gray for headings */
+}
+
+.fund-request {
+    background-color: #e0f7fa; /* Light ice blue for fund requests */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fund-request h5 {
+    margin-bottom: 10px;
+}
+
+.contact-details {
+    display: none;
+}
+
+.btn-contact {
+    margin-top: 10px;
+}

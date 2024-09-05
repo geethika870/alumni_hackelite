@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Stories</title>
+    <link rel="stylesheet" href="story.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Half: Alumni Stories -->
+        <div class="left-half" id="stories-container">
+            <!-- Sample Story Post -->
+            <div class="story-post" data-likes="25" data-comments="5" data-post-id="1">
+                <div class="profile">
+                    <img src="profile1.jpg" alt="Profile Picture" class="profile-pic">
+                    <div class="profile-info">
+                        <h4>John Doe</h4>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                </div>
+                <p class="story-content">This is a story from an alumnus.</p>
+                <div class="actions">
+                    <span class="like">
+                        <i class="heart-icon">&#x2661;</i> <!-- Outlined heart icon initially -->
+                        <span class="like-text">Like</span>
+                        <span class="like-count">25</span>
+                    </span>
+                    <label for="comment1" class="comment-label">Comment (5)</label>
+                </div>
+                <div class="comment-section">
+                    <input type="text" id="comment1" placeholder="Write a comment..." class="comment-box">
+                    <button class="comment-btn">Yes</button>
+                    <div class="comments-container" style="display: none;">
+                        <p><strong>Comments:</strong></p>
+                        <ul class="comments-list">
+                            <!-- Comments will appear here -->
+                        </ul>
+                        <a href="#" class="toggle-comments">Show Comments</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional stories can be added here with different likes and comments -->
+
+        </div>
+
+        <!-- Right Half: Write Your Story -->
+        <div class="right-half">
+            <h3>Write Your Story</h3>
+            <textarea placeholder="Share your story here..." class="story-input" id="story-input"></textarea>
+            <div class="post-actions">
+                <button class="post-btn" id="post-btn">Post</button>
+                <button class="draft-btn">Save as Draft</button>
+            </div>
+        </div>
+    </div>
+    <script src="story.js"></script>
+</body>
+</html>

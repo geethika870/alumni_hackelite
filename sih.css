@@ -1,0 +1,115 @@
+/* Header Section Styling */
+.main-header {
+  background-color:rgba(62,60,70,255); /* Dark Blue to match the logo */
+  color: white;
+  position: relative;
+  padding: 30px 0;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  
+  top: 50%;
+  transform: translateY(-50%);
+  height: 120px; /* Adjust the size as needed */
+}
+
+/* Navigation Bar Styling */
+.navbar-dark {
+  background-color:rgba(62,60,70,255); /* Dark Blue for a consistent look */
+}
+
+.navbar-brand, .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFD700; /* Gold on hover */
+}
+
+.login-signup .btn {
+  color:rgba(62,60,70,255);
+  border-color: white;
+  background-color:white; /* Gold for the login/signup buttons */
+}
+
+.login-signup .btn:hover {
+  background-color:white; /* Darker gold on hover */
+}
+
+/* Welcome Section Styling */
+.welcome-section {
+  background-color: #f8f9fa; /* Light background for contrast */
+  color: rgba(62,60,70,255); /* Dark Blue text */
+}
+
+/* Features Section Styling */
+.features-section .feature-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease-in-out;
+}
+
+.features-section .feature-card:hover {
+  transform: translateY(-10px);
+  border-color:rgba(62,60,70,255);
+}
+
+.features-section .feature-card i {
+  color:rgba(62,60,70,255);
+}
+
+/* Footer Section Styling */
+.footer-section {
+  background-color:rgba(62,60,70,255); /* Dark Blue for consistency */
+  color: white;
+}
+/* Custom CSS for Profile Icon */
+/* Custom CSS for Profile Icon */
+.profile-icon {
+    background-color: #007bff; /* Primary color background */
+    border-radius: 50%;
+    width: 70px; /* Increased size to fit the label */
+    height: auto; /* Adjust height to fit content */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Add padding to accommodate label */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.profile-icon a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.profile-icon a:hover {
+    color: #f8f9fa;
+    background-color: #0056b3;
+}
+
+.profile-label {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+.ai-chat-icon {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.ai-chat-icon i {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.ai-chat-icon .chat-label {
+    font-size: 1rem;
+    color: #007bff;
+    margin-top: 5px;
+}
+
