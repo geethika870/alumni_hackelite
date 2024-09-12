@@ -1,93 +1,132 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styles */
+/* register.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e0e0e0, #b0b0b0); /* Ash color gradient */
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-/* Container Styling */
 .container {
-    width: 100%;
-    max-width: 400px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
-/* Form Box Styling */
 .form-box {
-    width: 100%;
+    padding: 40px;
+    position: relative;
+    width: 400px;
+}
+
+.form-box h2 {
     text-align: center;
-}
-
-h2 {
     margin-bottom: 20px;
-    color: #333;
-    font-size: 24px;
+    font-size: 28px;
+    color: #2c3e50;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Input Group Styling */
 .input-group {
-    margin-bottom: 15px;
-    text-align: left;
+    margin-bottom: 20px;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 5px;
+    color: #2c3e50;
     font-weight: bold;
-    color: #555;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
-.input-group input,
-.input-group select {
+.input-group select,
+.input-group input {
     width: 100%;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 12px;
     border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #ebebeb;
+    color: #2c3e50;
     font-size: 16px;
+    font-family: 'Helvetica Neue', sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
 }
 
-/* Button Styling */
+.input-group input::placeholder {
+    color: #999;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3) inset;
+}
+
+.username-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.emoji {
+    position: absolute;
+    right: 10px;
+    font-size: 22px;
+}
+
+.username-group input {
+    padding-right: 40px; /* Adjust to make space for the emoji */
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
 .btn {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
+    background: #3498db;
     border: none;
-    border-radius: 4px;
-    color: #fff;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
     font-weight: bold;
-    font-size: 16px;
+    font-family: 'Helvetica Neue', sans-serif;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background: #2980b9;
+    transform: translateY(-2px);
 }
 
-/* Link Styling */
-p {
-    margin-top: 15px;
-    color: #666;
-    font-size: 14px;
+.form-box p {
+    text-align: center;
+    margin-top: 20px;
+    color: #2c3e50;
 }
 
-p a {
-    color: #007bff;
+.form-box p a {
+    color: #3498db;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-p a:hover {
-    text-decoration: underline;
+.form-box p a:hover {
+    color: #2980b9;
 }
