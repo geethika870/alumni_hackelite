@@ -10,48 +10,77 @@
     <div class="container">
         <div class="form-box">
             <h2>Register</h2>
-            <form action="welcome.html" method="POST">
+            <form id="registerForm" action="login.html" method="POST" onsubmit="return validateForm()">
                 <div class="input-group">
                     <label for="university">University</label>
                     <select name="myuniversity" id="university">
-                         <option value="gu">gujarat university</option>
-                           <option value="iitg">Indian Institute of Technology,Gandhinagar</option>
-                           <option value="NU">Nirma university</option>
-                           <option value="svnit">sardar vallabhbhai National Institute of Technology,surat</option>
+                        <option value="gu">Gujarat University</option>
+                        <option value="iitg">Indian Institute of Technology, Gandhinagar</option>
+                        <option value="nu">Nirma University</option>
+                        <option value="svnit">Sardar Vallabhbhai National Institute of Technology, Surat</option>
                     </select>
-                     </div>
- <div class="input-group">
+                </div>
+
+                <div class="input-group">
                     <label for="department">Department</label>
                     <select name="mydepartment" id="department">
-                         <option value="cse">cse</option>
-                           <option value="it">information Technology</option>
-                           <option value="ds">data science</option>
-                           <option value="eee">EEE</option>
+                        <option value="cse">CSE</option>
+                        <option value="it">Information Technology</option>
+                        <option value="ds">Data Science</option>
+                        <option value="eee">EEE</option>
                     </select>
-
                 </div>
 
                 <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="myusername" >
+                    <label for="year">Year of Passing</label>
+                    <input type="number" id="year" name="year" placeholder="YYYY" required>
                 </div>
+
+                <div class="input-group username-group">
+                    <label for="username">Username</label>
+                    <span id="emoji" class="emoji"></span>
+                    <input type="text" id="username" name="myusername" placeholder="Enter your username" required>
+                </div>
+
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password"  >
+                    <input type="password" id="password" name="password" required>
                 </div>
+
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+
+                <p id="error-message" class="error-message"></p>
                 <button type="submit" class="btn">Register</button>
             </form>
-            <p>Already have an account? <a href="login.html">Login here</a></p>
+            <p>Already have an account? <a href="ls.html">Login here</a></p>
         </div>
     </div>
 
     <script>
-        function setUsernamePrefix() {
-            const university = document.getElementById('university');
-            const username = document.getElementById('username');
-            username.value = university.value;
-            username.focus();
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                document.getElementById('error-message').textContent = "Passwords do not match!";
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
         }
+
+        document.getElementById('year').addEventListener('input', function () {
+            const year = parseInt(this.value);
+            const currentYear = new Date().getFullYear();
+            const emojiSpan = document.getElementById('emoji');
+            if (year < currentYear) {
+                emojiSpan.textContent = "🎓"; // Alumni emoji
+            } else {
+                emojiSpan.textContent = "🧑‍🎓"; // Student emoji
+            }
+        });
     </script>
 </body>
 </html>
